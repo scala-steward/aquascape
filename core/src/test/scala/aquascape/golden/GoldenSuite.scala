@@ -83,7 +83,6 @@ trait GoldenSuite extends CatsEffectSuite {
       f: Trace[IO] ?=> StreamCode
   )(using parent: TestName): IO[Unit] = {
     def write(suffix: String)(using Trace[IO]): IO[Unit] = {
-      import doodle.java2d.*
       val streamCode: StreamCode = f
       val exampleName: ExampleName =
         ExampleName(s"${name}${suffix}", parent, "gif")
@@ -130,7 +129,6 @@ private def animateStream(
     Trace[IO]
 ): IO[Unit] =
   import aquascape.*
-  import doodle.syntax.all.*
   import doodle.interact.syntax.all._
   import doodle.java2d.*
   import doodle.core.format.*
