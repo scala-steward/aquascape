@@ -132,7 +132,7 @@ private def animateStream(
   import doodle.interact.syntax.all._
   import doodle.java2d.*
   import doodle.core.format.*
-  val frame = doodle.java2d.effect.Frame.default.withSize(5000, 5000)
+  val frame = doodle.java2d.effect.Frame.default.withSize(1000, 1000)
   val targetDir = exampleName.parent.imageDir
   Files[IO].createDirectories(targetDir) >>
     (stream
