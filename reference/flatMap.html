@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Typelevel Laika + Helium Theme" />
+  <title>flatMap</title>
+  
+  <meta name="author" content="Zainab Ali"/>
+  
+  
+  <meta name="description" content="docs"/>
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:500">
+  
+  <link rel="stylesheet" type="text/css" href="../helium/site/icofont.min.css" />
+    <link rel="stylesheet" type="text/css" href="../helium/site/laika-helium.css" />
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+    <link rel="stylesheet" type="text/css" href="../a11y-dark.min.css" />
+  <script src="../helium/site/laika-helium.js"></script>
+    <script src="../main.js"></script>
+    <script src="../highlight.min.js"></script>
+    <script src="../aquascape.js"></script>
+  
+  
+  <script> /* for avoiding page load transitions */ </script>
+</head>
+
+  <body>
+
+    <header id="top-bar" class="light-default dark-default">
+
+  <div class="row">
+    <a id="nav-icon">
+      <i class="icofont-laika navigationMenu" title="Navigation">&#xefa2;</i>
+    </a>
+    
+    
+  </div>
+
+  <a class="icon-link glyph-link" href="../"><i class="icofont-laika home" title="Home">&#xef47;</i></a>
+
+  <div class="row links">
+    
+    <a class="icon-link svg-link" href="https://github.com/scala-steward/aquascape"><span class="github" title="Source Code"><svg class="svg-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g class="svg-shape">
+    <path d="M49.995,1c-27.609,-0 -49.995,22.386 -49.995,50.002c-0,22.09 14.325,40.83 34.194,47.444c2.501,0.458 3.413,-1.086 3.413,-2.412c0,-1.185 -0.043,-4.331 -0.067,-8.503c-13.908,3.021 -16.843,-6.704 -16.843,-6.704c-2.274,-5.773 -5.552,-7.311 -5.552,-7.311c-4.54,-3.103 0.344,-3.042 0.344,-3.042c5.018,0.356 7.658,5.154 7.658,5.154c4.46,7.64 11.704,5.433 14.552,4.156c0.454,-3.232 1.744,-5.436 3.174,-6.685c-11.102,-1.262 -22.775,-5.553 -22.775,-24.713c-0,-5.457 1.949,-9.92 5.147,-13.416c-0.516,-1.265 -2.231,-6.348 0.488,-13.233c0,0 4.199,-1.344 13.751,5.126c3.988,-1.108 8.266,-1.663 12.518,-1.682c4.245,0.019 8.523,0.574 12.517,1.682c9.546,-6.47 13.736,-5.126 13.736,-5.126c2.728,6.885 1.013,11.968 0.497,13.233c3.204,3.496 5.141,7.959 5.141,13.416c0,19.209 -11.691,23.436 -22.83,24.673c1.795,1.544 3.394,4.595 3.394,9.26c0,6.682 -0.061,12.076 -0.061,13.715c0,1.338 0.899,2.894 3.438,2.406c19.853,-6.627 34.166,-25.354 34.166,-47.438c-0,-27.616 -22.389,-50.002 -50.005,-50.002"/>
+  </g>
+</svg></span></a>
+    
+  </div>  
+
+</header>
+    
+    <nav id="sidebar">
+
+  <div class="row">
+    
+    <a class="icon-link svg-link" href="https://github.com/scala-steward/aquascape"><span class="github" title="Source Code"><svg class="svg-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g class="svg-shape">
+    <path d="M49.995,1c-27.609,-0 -49.995,22.386 -49.995,50.002c-0,22.09 14.325,40.83 34.194,47.444c2.501,0.458 3.413,-1.086 3.413,-2.412c0,-1.185 -0.043,-4.331 -0.067,-8.503c-13.908,3.021 -16.843,-6.704 -16.843,-6.704c-2.274,-5.773 -5.552,-7.311 -5.552,-7.311c-4.54,-3.103 0.344,-3.042 0.344,-3.042c5.018,0.356 7.658,5.154 7.658,5.154c4.46,7.64 11.704,5.433 14.552,4.156c0.454,-3.232 1.744,-5.436 3.174,-6.685c-11.102,-1.262 -22.775,-5.553 -22.775,-24.713c-0,-5.457 1.949,-9.92 5.147,-13.416c-0.516,-1.265 -2.231,-6.348 0.488,-13.233c0,0 4.199,-1.344 13.751,5.126c3.988,-1.108 8.266,-1.663 12.518,-1.682c4.245,0.019 8.523,0.574 12.517,1.682c9.546,-6.47 13.736,-5.126 13.736,-5.126c2.728,6.885 1.013,11.968 0.497,13.233c3.204,3.496 5.141,7.959 5.141,13.416c0,19.209 -11.691,23.436 -22.83,24.673c1.795,1.544 3.394,4.595 3.394,9.26c0,6.682 -0.061,12.076 -0.061,13.715c0,1.338 0.899,2.894 3.438,2.406c19.853,-6.627 34.166,-25.354 34.166,-47.438c-0,-27.616 -22.389,-50.002 -50.005,-50.002"/>
+  </g>
+</svg></span></a>
+    
+  </div>
+
+  <ul class="nav-list">
+    <li class="level1 nav-node"><a href="index.html">Reference Guide</a></li>
+    <li class="level2 nav-leaf"><a href="append.html">append</a></li>
+    <li class="level2 nav-leaf"><a href="bracket.html">bracket</a></li>
+    <li class="level2 nav-leaf"><a href="chunk.html">chunk</a></li>
+    <li class="level2 nav-leaf"><a href="drop.html">drop</a></li>
+    <li class="level2 nav-leaf"><a href="errors.html">errors</a></li>
+    <li class="level2 nav-leaf"><a href="evalMap.html">evalMap</a></li>
+    <li class="level2 nav-leaf"><a href="filter.html">filter</a></li>
+    <li class="level2 active nav-leaf"><a href="#">flatMap</a></li>
+    <li class="level2 nav-leaf"><a href="merge.html">merge</a></li>
+    <li class="level2 nav-leaf"><a href="take.html">take</a></li>
+  </ul>
+
+</nav>
+
+    <div id="container">
+
+      
+<nav id="page-nav">
+  <p class="header"><a href="#">flatMap</a></p>
+
+  <ul class="nav-list">
+    <li class="level1 nav-node"><a href="#basic-behaviour">Basic behaviour</a></li>
+    <li class="level2 nav-leaf"><a href="#termination-of-the-child-stream">Termination of the child stream</a></li>
+    <li class="level1 nav-leaf"><a href="#chunk-propagation">Chunk propagation</a></li>
+    <li class="level1 nav-node"><a href="#error-propagation">Error propagation</a></li>
+    <li class="level2 nav-leaf"><a href="#handling-errors-raised-in-the-child-stream">Handling errors raised in the child stream</a></li>
+    <li class="level2 nav-leaf"><a href="#handling-errors-raised-in-the-input-stream">Handling errors raised in the input stream</a></li>
+    <li class="level1 nav-node"><a href="#resource-finalizers">Resource finalizers</a></li>
+    <li class="level2 nav-leaf"><a href="#input-stream-finalizers">Input stream finalizers</a></li>
+    <li class="level2 nav-leaf"><a href="#child-stream-finalizers">Child stream finalizers</a></li>
+  </ul>
+
+  <p class="footer"></p>
+</nav>
+
+
+      <main class="content">
+
+        <h1 id="flatmap" class="title">flatMap</h1>
+        <p>This is a reference guide to <code>flatMap</code>. It describes:</p>
+        <ul>
+          <li>The basic behaviour of <code>flatMap</code>.</li>
+        </ul>
+        <ul>
+          <li>How <code>flatMap</code> propagates chunks.</li>
+        </ul>
+        <ul>
+          <li>How <code>flatMap</code> propagates errors.</li>
+        </ul>
+        <ul>
+          <li>When resource finalizers are executed.</li>
+        </ul>
+        
+        <h2 id="basic-behaviour" class="section"><a class="anchor-link left" href="#basic-behaviour"><i class="icofont-laika link">&#xef71;</i></a>Basic behaviour</h2>
+        <p>The <code>flatMap</code> operator pulls on an input stream and constructs a child stream for each element. The child stream is pulled on by the resulting stream.</p>
+        <p>In the following example, the input stream contains a single <code>&quot;ab&quot;</code> string. When pulled on by <code>flatMap</code> a child stream is constructed. When pulled on, this outputs characters <code>&#39;a&#39;</code> and <code>&#39;b&#39;</code>. The final output is a list of the pulled characters.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.basicCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.basic" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.basic, "DocsReferenceFlatMap.basicCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.basic"));
+</script>
+        
+        <h3 id="termination-of-the-child-stream" class="section"><a class="anchor-link left" href="#termination-of-the-child-stream"><i class="icofont-laika link">&#xef71;</i></a>Termination of the child stream</h3>
+        <p>If the child stream is done, the input stream is pulled on once more and a new child stream is constructed.</p>
+        <p>The following example shows an input stream with two elements <code>&quot;ab&quot;</code> and <code>&quot;xy&quot;</code>. Note that the pull for the second <code>&quot;xy&quot;</code> element occurs after elements <code>&#39;a&#39;</code> and <code>&#39;b&#39;</code> have been outputted by the first child stream.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.multipleInputElementsCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.multipleInputElements" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.multipleInputElements, "DocsReferenceFlatMap.multipleInputElementsCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.multipleInputElements"));
+</script>
+        
+        <h2 id="chunk-propagation" class="section"><a class="anchor-link left" href="#chunk-propagation"><i class="icofont-laika link">&#xef71;</i></a>Chunk propagation</h2>
+        <p>The <code>flatMap</code> operator preserves the chunks of the child stream. </p>
+        <p>The following example shows a chunked view of the same input stream with <code>&quot;ab&quot;</code> and <code>&quot;xy&quot;</code> elements.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.multipleInputElementschunkedCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.multipleInputElementschunkedChunked" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.multipleInputElements, "DocsReferenceFlatMap.multipleInputElementschunkedCode", ExampleFrameIds.chunked("DocsReferenceFlatMap.multipleInputElementschunkedChunked"));
+</script>
+        <p>Note that the child streams output chunks <code>[a, b]</code> and <code>[x,y]</code> respectively. These are outputted to the resulting stream by the <code>flatMap</code> operator.</p>
+        
+        <h2 id="error-propagation" class="section"><a class="anchor-link left" href="#error-propagation"><i class="icofont-laika link">&#xef71;</i></a>Error propagation</h2>
+        <p>Errors raised in the child stream are propagated to the resulting stream.</p>
+        <p>In the following example, an error is raised when the child stream is pulled on. This is propagated to the resulting stream, and the entire program terminates with the error.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.errorPropagationCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.errorPropagation" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.errorPropagation, "DocsReferenceFlatMap.errorPropagationCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.errorPropagation"));
+</script>
+        
+        <h3 id="handling-errors-raised-in-the-child-stream" class="section"><a class="anchor-link left" href="#handling-errors-raised-in-the-child-stream"><i class="icofont-laika link">&#xef71;</i></a>Handling errors raised in the child stream</h3>
+        <p>Errors raised in the child stream can be handled in the resulting stream using the <code>handleError</code> operator.</p>
+        <p>In the following example, the raised error is handled by outputting the characer <code>&#39;z&#39;</code>.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.errorHandlingCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.errorHandling" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.errorHandling, "DocsReferenceFlatMap.errorHandlingCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.errorHandling"));
+</script>
+        
+        <h3 id="handling-errors-raised-in-the-input-stream" class="section"><a class="anchor-link left" href="#handling-errors-raised-in-the-input-stream"><i class="icofont-laika link">&#xef71;</i></a>Handling errors raised in the input stream</h3>
+        <p>Errors raised in the input stream can also be handled in the resulting stream.</p>
+        <p>In the following example, the input stream raises an error when pulled on. The error is handled in the resulting stream by outputting <code>&#39;z&#39;</code>. Note that the child stream is never constructed.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.errorHandlingInputCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.errorHandlingInput" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.errorHandlingInput, "DocsReferenceFlatMap.errorHandlingInputCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.errorHandlingInput"));
+</script>
+        
+        <h2 id="resource-finalizers" class="section"><a class="anchor-link left" href="#resource-finalizers"><i class="icofont-laika link">&#xef71;</i></a>Resource finalizers</h2>
+        
+        <h3 id="input-stream-finalizers" class="section"><a class="anchor-link left" href="#input-stream-finalizers"><i class="icofont-laika link">&#xef71;</i></a>Input stream finalizers</h3>
+        <p>The input stream may have finalizers associated with it. These are executed when the resulting stream terminates.</p>
+        <p>The following example has a <code>abxy</code> finalizer associated with the input stream. Note that the finalizer is executed after all child streams are done.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.finalizerInputCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.finalizerInput" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.finalizerInput, "DocsReferenceFlatMap.finalizerInputCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.finalizerInput"));
+</script>
+        
+        <h3 id="child-stream-finalizers" class="section"><a class="anchor-link left" href="#child-stream-finalizers"><i class="icofont-laika link">&#xef71;</i></a>Child stream finalizers</h3>
+        <p>Finalizers may also be associated with a child stream. If so, it is executed once the child stream is done.</p>
+        <p>The following example associates finalizers with both child streams. Note that the <code>ab</code> finalizer is executed when the first child stream is done, not when the resulting stream is done.</p>
+        <pre class="example-code"><code id="DocsReferenceFlatMap.finalizerChildCode" class="language-scala"></code></pre>
+        <div id="DocsReferenceFlatMap.finalizerChild" class="example-frame"></div>
+        <script>
+ aquascape.example(DocsReferenceFlatMap.finalizerChild, "DocsReferenceFlatMap.finalizerChildCode", ExampleFrameIds.unchunked("DocsReferenceFlatMap.finalizerChild"));
+</script>
+
+        
+<hr class="footer-rule"/>
+<footer>
+  Site generated by <a href="https://typelevel.org/Laika/">Laika</a> with the Helium theme.
+</footer>
+
+
+      </main>
+
+    </div>
+
+  </body>
+
+</html>
