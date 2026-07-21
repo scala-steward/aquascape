@@ -3482,21 +3482,15 @@ $c_Laquascape_symbolguide_SymbolGuide$.prototype.constructor = $c_Laquascape_sym
 function $h_Laquascape_symbolguide_SymbolGuide$() {
 }
 $h_Laquascape_symbolguide_SymbolGuide$.prototype = $c_Laquascape_symbolguide_SymbolGuide$.prototype;
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finishedErrored", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_finishedErrored;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finished", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_finished;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "start", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_start;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "error", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_error;
   }),
   "configurable": true
 }));
@@ -3506,9 +3500,21 @@ Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "time", 
   }),
   "configurable": true
 }));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finishedErrored", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_finishedErrored;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "pull", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_pull;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finished", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_finished;
   }),
   "configurable": true
 }));
@@ -3539,12 +3545,6 @@ Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "done", 
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "output", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_output;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "error", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_error;
   }),
   "configurable": true
 }));
@@ -6398,6 +6398,12 @@ $c_Ldocs_reference_append$.prototype.constructor = $c_Ldocs_reference_append$;
 function $h_Ldocs_reference_append$() {
 }
 $h_Ldocs_reference_append$.prototype = $c_Ldocs_reference_append$.prototype;
+Object.defineProperty($c_Ldocs_reference_append$.prototype, "infinite", ({
+  "get": (function() {
+    return this.Ldocs_reference_append$__f_infinite;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_append$.prototype, "basic", ({
   "get": (function() {
     return this.Ldocs_reference_append$__f_basic;
@@ -6413,12 +6419,6 @@ Object.defineProperty($c_Ldocs_reference_append$.prototype, "finite", ({
 Object.defineProperty($c_Ldocs_reference_append$.prototype, "errors", ({
   "get": (function() {
     return this.Ldocs_reference_append$__f_errors;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_append$.prototype, "infinite", ({
-  "get": (function() {
-    return this.Ldocs_reference_append$__f_infinite;
   }),
   "configurable": true
 }));
@@ -6772,9 +6772,9 @@ $c_Ldocs_reference_errors$.prototype.constructor = $c_Ldocs_reference_errors$;
 function $h_Ldocs_reference_errors$() {
 }
 $h_Ldocs_reference_errors$.prototype = $c_Ldocs_reference_errors$.prototype;
-Object.defineProperty($c_Ldocs_reference_errors$.prototype, "raiseErrorExitCase", ({
+Object.defineProperty($c_Ldocs_reference_errors$.prototype, "handleErrorExitCase", ({
   "get": (function() {
-    return this.Ldocs_reference_errors$__f_raiseErrorExitCase;
+    return this.Ldocs_reference_errors$__f_handleErrorExitCase;
   }),
   "configurable": true
 }));
@@ -6796,15 +6796,15 @@ Object.defineProperty($c_Ldocs_reference_errors$.prototype, "raiseError", ({
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_errors$.prototype, "attempt", ({
+Object.defineProperty($c_Ldocs_reference_errors$.prototype, "raiseErrorExitCase", ({
   "get": (function() {
-    return this.Ldocs_reference_errors$__f_attempt;
+    return this.Ldocs_reference_errors$__f_raiseErrorExitCase;
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_errors$.prototype, "handleErrorExitCase", ({
+Object.defineProperty($c_Ldocs_reference_errors$.prototype, "attempt", ({
   "get": (function() {
-    return this.Ldocs_reference_errors$__f_handleErrorExitCase;
+    return this.Ldocs_reference_errors$__f_attempt;
   }),
   "configurable": true
 }));
@@ -6860,12 +6860,6 @@ $c_Ldocs_reference_evalMap$.prototype.constructor = $c_Ldocs_reference_evalMap$;
 function $h_Ldocs_reference_evalMap$() {
 }
 $h_Ldocs_reference_evalMap$.prototype = $c_Ldocs_reference_evalMap$.prototype;
-Object.defineProperty($c_Ldocs_reference_evalMap$.prototype, "error", ({
-  "get": (function() {
-    return this.Ldocs_reference_evalMap$__f_error;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_evalMap$.prototype, "basic", ({
   "get": (function() {
     return this.Ldocs_reference_evalMap$__f_basic;
@@ -6905,6 +6899,12 @@ Object.defineProperty($c_Ldocs_reference_evalMap$.prototype, "errorEvalMap", ({
 Object.defineProperty($c_Ldocs_reference_evalMap$.prototype, "evalMapChunk", ({
   "get": (function() {
     return this.Ldocs_reference_evalMap$__f_evalMapChunk;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_evalMap$.prototype, "error", ({
+  "get": (function() {
+    return this.Ldocs_reference_evalMap$__f_error;
   }),
   "configurable": true
 }));
@@ -6952,6 +6952,12 @@ Object.defineProperty($c_Ldocs_reference_filter$.prototype, "mapFilter", ({
   }),
   "configurable": true
 }));
+Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterNot", ({
+  "get": (function() {
+    return this.Ldocs_reference_filter$__f_filterNot;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterWithPrevious", ({
   "get": (function() {
     return this.Ldocs_reference_filter$__f_filterWithPrevious;
@@ -6967,12 +6973,6 @@ Object.defineProperty($c_Ldocs_reference_filter$.prototype, "changes", ({
 Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterChunked", ({
   "get": (function() {
     return this.Ldocs_reference_filter$__f_filterChunked;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterNot", ({
-  "get": (function() {
-    return this.Ldocs_reference_filter$__f_filterNot;
   }),
   "configurable": true
 }));
@@ -7010,6 +7010,12 @@ $c_Ldocs_reference_flatMap$.prototype.constructor = $c_Ldocs_reference_flatMap$;
 function $h_Ldocs_reference_flatMap$() {
 }
 $h_Ldocs_reference_flatMap$.prototype = $c_Ldocs_reference_flatMap$.prototype;
+Object.defineProperty($c_Ldocs_reference_flatMap$.prototype, "multipleInputElements", ({
+  "get": (function() {
+    return this.Ldocs_reference_flatMap$__f_multipleInputElements;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_flatMap$.prototype, "errorHandlingInput", ({
   "get": (function() {
     return this.Ldocs_reference_flatMap$__f_errorHandlingInput;
@@ -7037,12 +7043,6 @@ Object.defineProperty($c_Ldocs_reference_flatMap$.prototype, "finalizerInput", (
 Object.defineProperty($c_Ldocs_reference_flatMap$.prototype, "errorHandling", ({
   "get": (function() {
     return this.Ldocs_reference_flatMap$__f_errorHandling;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_flatMap$.prototype, "multipleInputElements", ({
-  "get": (function() {
-    return this.Ldocs_reference_flatMap$__f_multipleInputElements;
   }),
   "configurable": true
 }));
@@ -7092,15 +7092,15 @@ $c_Ldocs_reference_merge$.prototype.constructor = $c_Ldocs_reference_merge$;
 function $h_Ldocs_reference_merge$() {
 }
 $h_Ldocs_reference_merge$.prototype = $c_Ldocs_reference_merge$.prototype;
-Object.defineProperty($c_Ldocs_reference_merge$.prototype, "merge", ({
-  "get": (function() {
-    return this.Ldocs_reference_merge$__f_merge;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_merge$.prototype, "resources", ({
   "get": (function() {
     return this.Ldocs_reference_merge$__f_resources;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_merge$.prototype, "merge", ({
+  "get": (function() {
+    return this.Ldocs_reference_merge$__f_merge;
   }),
   "configurable": true
 }));
@@ -7184,6 +7184,12 @@ $c_Ldocs_reference_parEvalMap$.prototype.constructor = $c_Ldocs_reference_parEva
 function $h_Ldocs_reference_parEvalMap$() {
 }
 $h_Ldocs_reference_parEvalMap$.prototype = $c_Ldocs_reference_parEvalMap$.prototype;
+Object.defineProperty($c_Ldocs_reference_parEvalMap$.prototype, "parEvalMapSingletonChunks", ({
+  "get": (function() {
+    return this.Ldocs_reference_parEvalMap$__f_parEvalMapSingletonChunks;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_parEvalMap$.prototype, "parEvalMapUnorderedUnbounded", ({
   "get": (function() {
     return this.Ldocs_reference_parEvalMap$__f_parEvalMapUnorderedUnbounded;
@@ -7193,12 +7199,6 @@ Object.defineProperty($c_Ldocs_reference_parEvalMap$.prototype, "parEvalMapUnord
 Object.defineProperty($c_Ldocs_reference_parEvalMap$.prototype, "parEvalMapConcurrency", ({
   "get": (function() {
     return this.Ldocs_reference_parEvalMap$__f_parEvalMapConcurrency;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_parEvalMap$.prototype, "parEvalMapSingletonChunks", ({
-  "get": (function() {
-    return this.Ldocs_reference_parEvalMap$__f_parEvalMapSingletonChunks;
   }),
   "configurable": true
 }));
@@ -7250,12 +7250,6 @@ $c_Ldocs_reference_scan$.prototype.constructor = $c_Ldocs_reference_scan$;
 function $h_Ldocs_reference_scan$() {
 }
 $h_Ldocs_reference_scan$.prototype = $c_Ldocs_reference_scan$.prototype;
-Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMap", ({
-  "get": (function() {
-    return this.Ldocs_reference_scan$__f_scanMap;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMonoid", ({
   "get": (function() {
     return this.Ldocs_reference_scan$__f_scanMonoid;
@@ -7265,6 +7259,12 @@ Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMonoid", ({
 Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanChunkPropagation", ({
   "get": (function() {
     return this.Ldocs_reference_scan$__f_scanChunkPropagation;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMap", ({
+  "get": (function() {
+    return this.Ldocs_reference_scan$__f_scanMap;
   }),
   "configurable": true
 }));
@@ -7308,27 +7308,27 @@ $c_Ldocs_reference_take$.prototype.constructor = $c_Ldocs_reference_take$;
 function $h_Ldocs_reference_take$() {
 }
 $h_Ldocs_reference_take$.prototype = $c_Ldocs_reference_take$.prototype;
-Object.defineProperty($c_Ldocs_reference_take$.prototype, "basic", ({
-  "get": (function() {
-    return this.Ldocs_reference_take$__f_basic;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_take$.prototype, "takeRight", ({
   "get": (function() {
     return this.Ldocs_reference_take$__f_takeRight;
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_take$.prototype, "takeWhile", ({
-  "get": (function() {
-    return this.Ldocs_reference_take$__f_takeWhile;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_take$.prototype, "takeThrough", ({
   "get": (function() {
     return this.Ldocs_reference_take$__f_takeThrough;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_take$.prototype, "basic", ({
+  "get": (function() {
+    return this.Ldocs_reference_take$__f_basic;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_take$.prototype, "takeWhile", ({
+  "get": (function() {
+    return this.Ldocs_reference_take$__f_takeWhile;
   }),
   "configurable": true
 }));
@@ -7395,21 +7395,15 @@ $c_Ldocs_reference_time$.prototype.given_Show_FiniteDuration__Lcats_Show = (func
   }
   return this.Ldocs_reference_time$__f_given_Show_FiniteDuration$lzy1;
 });
-Object.defineProperty($c_Ldocs_reference_time$.prototype, "metered", ({
-  "get": (function() {
-    return this.Ldocs_reference_time$__f_metered;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateSlowElementEval", ({
-  "get": (function() {
-    return this.Ldocs_reference_time$__f_fixedRateSlowElementEval;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "delayBy", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_delayBy;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_time$.prototype, "spaced", ({
+  "get": (function() {
+    return this.Ldocs_reference_time$__f_spaced;
   }),
   "configurable": true
 }));
@@ -7431,6 +7425,12 @@ Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateDamped", ({
   }),
   "configurable": true
 }));
+Object.defineProperty($c_Ldocs_reference_time$.prototype, "metered", ({
+  "get": (function() {
+    return this.Ldocs_reference_time$__f_metered;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateStartImmediately", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_fixedRateStartImmediately;
@@ -7440,6 +7440,12 @@ Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateStartImmedia
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "awakeDelay", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_awakeDelay;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateSlowElementEval", ({
+  "get": (function() {
+    return this.Ldocs_reference_time$__f_fixedRateSlowElementEval;
   }),
   "configurable": true
 }));
@@ -7491,12 +7497,6 @@ Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateFastElementE
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_time$.prototype, "spaced", ({
-  "get": (function() {
-    return this.Ldocs_reference_time$__f_spaced;
-  }),
-  "configurable": true
-}));
 var $d_Ldocs_reference_time$ = new $TypeData().initClass($c_Ldocs_reference_time$, "docs.reference.time$", ({
   Ldocs_reference_time$: 1
 }));
@@ -7529,15 +7529,15 @@ $c_Ldocs_reference_topic$.prototype.constructor = $c_Ldocs_reference_topic$;
 function $h_Ldocs_reference_topic$() {
 }
 $h_Ldocs_reference_topic$.prototype = $c_Ldocs_reference_topic$.prototype;
-Object.defineProperty($c_Ldocs_reference_topic$.prototype, "topic", ({
-  "get": (function() {
-    return this.Ldocs_reference_topic$__f_topic;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_topic$.prototype, "delayedSubscriber", ({
   "get": (function() {
     return this.Ldocs_reference_topic$__f_delayedSubscriber;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_topic$.prototype, "topic", ({
+  "get": (function() {
+    return this.Ldocs_reference_topic$__f_topic;
   }),
   "configurable": true
 }));
