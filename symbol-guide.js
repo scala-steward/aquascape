@@ -3482,21 +3482,9 @@ $c_Laquascape_symbolguide_SymbolGuide$.prototype.constructor = $c_Laquascape_sym
 function $h_Laquascape_symbolguide_SymbolGuide$() {
 }
 $h_Laquascape_symbolguide_SymbolGuide$.prototype = $c_Laquascape_symbolguide_SymbolGuide$.prototype;
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "start", ({
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finished", ({
   "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_start;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "error", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_error;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "time", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_time;
+    return this.Laquascape_symbolguide_SymbolGuide$__f_finished;
   }),
   "configurable": true
 }));
@@ -3512,15 +3500,15 @@ Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "pull", 
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "finished", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_finished;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "label", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_label;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "start", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_start;
   }),
   "configurable": true
 }));
@@ -3530,21 +3518,33 @@ Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "outputC
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "eval", ({
-  "get": (function() {
-    return this.Laquascape_symbolguide_SymbolGuide$__f_eval;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "done", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_done;
   }),
   "configurable": true
 }));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "eval", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_eval;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "output", ({
   "get": (function() {
     return this.Laquascape_symbolguide_SymbolGuide$__f_output;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "error", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_error;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Laquascape_symbolguide_SymbolGuide$.prototype, "time", ({
+  "get": (function() {
+    return this.Laquascape_symbolguide_SymbolGuide$__f_time;
   }),
   "configurable": true
 }));
@@ -6940,21 +6940,15 @@ $c_Ldocs_reference_filter$.prototype.constructor = $c_Ldocs_reference_filter$;
 function $h_Ldocs_reference_filter$() {
 }
 $h_Ldocs_reference_filter$.prototype = $c_Ldocs_reference_filter$.prototype;
-Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filter", ({
-  "get": (function() {
-    return this.Ldocs_reference_filter$__f_filter;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_filter$.prototype, "mapFilter", ({
   "get": (function() {
     return this.Ldocs_reference_filter$__f_mapFilter;
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterNot", ({
+Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filter", ({
   "get": (function() {
-    return this.Ldocs_reference_filter$__f_filterNot;
+    return this.Ldocs_reference_filter$__f_filter;
   }),
   "configurable": true
 }));
@@ -6973,6 +6967,12 @@ Object.defineProperty($c_Ldocs_reference_filter$.prototype, "changes", ({
 Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterChunked", ({
   "get": (function() {
     return this.Ldocs_reference_filter$__f_filterChunked;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_filter$.prototype, "filterNot", ({
+  "get": (function() {
+    return this.Ldocs_reference_filter$__f_filterNot;
   }),
   "configurable": true
 }));
@@ -7250,6 +7250,12 @@ $c_Ldocs_reference_scan$.prototype.constructor = $c_Ldocs_reference_scan$;
 function $h_Ldocs_reference_scan$() {
 }
 $h_Ldocs_reference_scan$.prototype = $c_Ldocs_reference_scan$.prototype;
+Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMap", ({
+  "get": (function() {
+    return this.Ldocs_reference_scan$__f_scanMap;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMonoid", ({
   "get": (function() {
     return this.Ldocs_reference_scan$__f_scanMonoid;
@@ -7259,12 +7265,6 @@ Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMonoid", ({
 Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanChunkPropagation", ({
   "get": (function() {
     return this.Ldocs_reference_scan$__f_scanChunkPropagation;
-  }),
-  "configurable": true
-}));
-Object.defineProperty($c_Ldocs_reference_scan$.prototype, "scanMap", ({
-  "get": (function() {
-    return this.Ldocs_reference_scan$__f_scanMap;
   }),
   "configurable": true
 }));
@@ -7395,6 +7395,12 @@ $c_Ldocs_reference_time$.prototype.given_Show_FiniteDuration__Lcats_Show = (func
   }
   return this.Ldocs_reference_time$__f_given_Show_FiniteDuration$lzy1;
 });
+Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateSlowElementEval", ({
+  "get": (function() {
+    return this.Ldocs_reference_time$__f_fixedRateSlowElementEval;
+  }),
+  "configurable": true
+}));
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "delayBy", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_delayBy;
@@ -7443,12 +7449,6 @@ Object.defineProperty($c_Ldocs_reference_time$.prototype, "awakeDelay", ({
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateSlowElementEval", ({
-  "get": (function() {
-    return this.Ldocs_reference_time$__f_fixedRateSlowElementEval;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "meteredSlowInputEval", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_meteredSlowInputEval;
@@ -7461,15 +7461,15 @@ Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRateUndamped", (
   }),
   "configurable": true
 }));
-Object.defineProperty($c_Ldocs_reference_time$.prototype, "sleep", ({
-  "get": (function() {
-    return this.Ldocs_reference_time$__f_sleep;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_time$.prototype, "fixedRate", ({
   "get": (function() {
     return this.Ldocs_reference_time$__f_fixedRate;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_time$.prototype, "sleep", ({
+  "get": (function() {
+    return this.Ldocs_reference_time$__f_sleep;
   }),
   "configurable": true
 }));
@@ -7529,15 +7529,15 @@ $c_Ldocs_reference_topic$.prototype.constructor = $c_Ldocs_reference_topic$;
 function $h_Ldocs_reference_topic$() {
 }
 $h_Ldocs_reference_topic$.prototype = $c_Ldocs_reference_topic$.prototype;
-Object.defineProperty($c_Ldocs_reference_topic$.prototype, "delayedSubscriber", ({
-  "get": (function() {
-    return this.Ldocs_reference_topic$__f_delayedSubscriber;
-  }),
-  "configurable": true
-}));
 Object.defineProperty($c_Ldocs_reference_topic$.prototype, "topic", ({
   "get": (function() {
     return this.Ldocs_reference_topic$__f_topic;
+  }),
+  "configurable": true
+}));
+Object.defineProperty($c_Ldocs_reference_topic$.prototype, "delayedSubscriber", ({
+  "get": (function() {
+    return this.Ldocs_reference_topic$__f_delayedSubscriber;
   }),
   "configurable": true
 }));
